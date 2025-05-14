@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
 import { useState } from 'react';
+import { WiDaySunny, WiMoonWaxingCrescent3 } from 'react-icons/wi';
 
 export const Navbar = () => {
   const { isDark, toggleTheme } = useTheme();
@@ -40,7 +41,7 @@ export const Navbar = () => {
               whileTap={{ scale: 0.9 }}
               aria-label="Toggle theme"
             >
-              {isDark ? '🌞' : '🌙'}
+              {isDark ? <WiMoonWaxingCrescent3 size={20} color='white'/> : <WiDaySunny size={20} />}
             </motion.button>
 
             <button
